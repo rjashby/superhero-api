@@ -1,7 +1,6 @@
-import getRandomInt from "./number";
 export default class Superhero {
   static async getHero() {
-    getRandomInt();
+    let myNum = Math.floor(Math.random() * 731);
     console.log(myNum);
     try {
       const response = await fetch(`https://superheroapi.com/api/${process.env.API_KEY}/${myNum}`);
