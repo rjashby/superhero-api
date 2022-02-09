@@ -1,7 +1,10 @@
-export default class Superhero {  
-  static async getHero(id) {
+import getRandomInt from "./number";
+export default class Superhero {
+  static async getHero() {
+    getRandomInt();
+    console.log(myNum);
     try {
-      const response = await fetch(`https://superheroapi.com/api/${process.env.API_KEY}/700`);
+      const response = await fetch(`https://superheroapi.com/api/${process.env.API_KEY}/${myNum}`);
       if (!response.ok) {
         throw Error(response.statusText);
       }
