@@ -65,10 +65,4 @@ $(document).ready(function() {
     $('.showErrors').text("");
     makeApiCall();
   });
-
-  $('#armWrestle').click(function() {
-    $('.showErrors').text("");
-    makeApiCall();
-
-  });
 });
