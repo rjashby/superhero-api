@@ -5,12 +5,13 @@ import './css/styles.css';
 import Superhero from './super';
 
 function getCharacter(response) {
-  if (response.response === "success") {
-    $('#name').text(`Name: ${response.name}`);
-    $('#alignment').text(`Alignment: ${response.biography.alignment}`);
-    $('#image').html(`<img src="${response.image.url}">`);
+  if (response[0].id) {
+    $('#name').text(`Name: ${response[0].name}`);
+    $('#alignment').text(`Alignment: ${response[0].biography.alignment}`);
+    $('#image').html(`<img src="${response[0].image.url}">`);
   } else {
-    $('.showErrors').text(`There was an error: ${response.error}`);
+    $('.showErrors').text(`There was an error: ${response[0].error},  ${response[1].error},  ${response[2].error},  ${response[3].error}`);
+    
   }
 }
 
