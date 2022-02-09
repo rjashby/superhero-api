@@ -6,7 +6,7 @@ export default class Superhero {
     try {
       const response = await fetch(`https://superheroapi.com/api/${process.env.API_KEY}/${myNum}`);
       if (!response.ok) {
-        throw Error(response.statusText);
+        throw Error(response.error);
       }
       return response.json();
     } catch(error) {
