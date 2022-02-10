@@ -64,5 +64,6 @@ $(document).ready(function() {
   $('#random').click(function() {
     $('.showErrors').text("");
     makeApiCall();
+    $(".row").show();
   });
 });
