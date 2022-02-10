@@ -5,7 +5,7 @@ import './css/styles.css';
 import Superhero from './super';
 
 function getCharacter(response) {
-  if (response[2].id) {
+  if (response[0].id) {
     $('#char1').text(`Name: ${response[0].name}`);
     $('#com1').text(`Combat: ${response[0].powerstats.combat}`);
     $('#dur1').text(`Durability: ${response[0].powerstats.durability}`);

@@ -21,7 +21,7 @@ export default class Superhero {
       const finalData = await Promise.all(dataPromises);
       console.log(finalData);
       return finalData;
-      // const response = await ifetch(`https://superheroapi.com/api/${process.env.API_KEY}/${myNum}`);
+      // const response = await fetch(`https://superheroapi.com/api/${process.env.API_KEY}/${myNum}`);
       // if (!response.ok) {
       //   throw Error(response.error);
       // }
